@@ -138,7 +138,7 @@ function QBranches(branches) {
 	this._branches = branches;
 }
 
-QBranches.isKindOf(Quadtree);
+QBranches.kindOf(Quadtree);
 
 QBranches.prototype.first = function qbranchesFirst() {
 	return new QBranches(this._branches.map(function qbranchesFirstMap(tree) { return tree.first(); }));

@@ -27,7 +27,7 @@ Number.prototype.isBetween = function isBetween(a, b) {
 	return this >= b;
 }
 
-Function.prototype.isKindOf = function isKindOf(fn) {
+Function.prototype.kindOf = function kindOf(fn) {
 	/**
  	 * @constructor
  	 */

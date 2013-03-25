@@ -29,7 +29,7 @@ function MercatorProjection(projectionOrigin) {
 	Projection.call(this, projectionOrigin);
 }
 
-MercatorProjection.isKindOf(Projection);
+MercatorProjection.kindOf(Projection);
 
 MercatorProjection.prototype.project = function mercatorProjectionProject(latlon) {
 	var x = latlon.lon() - this.xOrigin();
@@ -48,7 +48,7 @@ function SimpleProjection(projectionOrigin) {
 	Projection.call(this, projectionOrigin);
 }
 
-SimpleProjection.isKindOf(Projection);
+SimpleProjection.kindOf(Projection);
 
 SimpleProjection.prototype.project = function simpleProjectionProject(latLon) {
 	var x = latLon.lon() - this.xOrigin();
@@ -184,7 +184,7 @@ function Segment(p1, p2) {
 	this._p2 = p2;
 }
 
-Segment.isKindOf(Line);
+Segment.kindOf(Line);
 
 Segment.prototype.p1 = function segmentP1() {
 	return this._p1;
@@ -412,7 +412,7 @@ function MapSectionZoom1(bounds) {
 	MapSection.call(this, 1, bounds);
 }
 
-MapSectionZoom1.isKindOf(MapSection);
+MapSectionZoom1.kindOf(MapSection);
 
 MapSectionZoom1.prototype.nextLevel = function mapSectionZoom1NextLevel(bounds) {
 	return new MapSectionZoom2(bounds);
@@ -428,7 +428,7 @@ function MapSectionZoom2(bounds) {
 	MapSection.call(this, 2, bounds);
 }
 
-MapSectionZoom2.isKindOf(MapSection);
+MapSectionZoom2.kindOf(MapSection);
 
 MapSectionZoom2.prototype.nextLevel = function mapSectionZoom2NextLevel(bounds) {
 	return new MapSectionZoom3(bounds);
@@ -444,7 +444,7 @@ function MapSectionZoom3(bounds) {
 	MapSection.call(this, 3, bounds);
 }
 
-MapSectionZoom3.isKindOf(MapSection);
+MapSectionZoom3.kindOf(MapSection);
 
 MapSectionZoom3.prototype.nextLevel = function mapSectionZoom3NextLevel(bounds) {
 	return new MapSectionZoom4(bounds);
@@ -460,7 +460,7 @@ function MapSectionZoom4(bounds) {
 	MapSection.call(this, 4, bounds);
 }
 
-MapSectionZoom4.isKindOf(MapSection);
+MapSectionZoom4.kindOf(MapSection);
 
 MapSectionZoom4.prototype.nextLevel = function mapSectionZoom4NextLevel(bounds) {
 	return new MapSectionZoom5(bounds);
@@ -476,7 +476,7 @@ function MapSectionZoom5(bounds) {
 	MapSection.call(this, 5, bounds);
 }
 
-MapSectionZoom5.isKindOf(MapSection);
+MapSectionZoom5.kindOf(MapSection);
 
 MapSectionZoom5.prototype.nextLevel = function mapSectionZoom5NextLevel(bounds) {
 	return new MapSectionZoom6(bounds);
@@ -492,7 +492,7 @@ function MapSectionZoom6(bounds) {
 	MapSection.call(this, 6, bounds);
 }
 
-MapSectionZoom6.isKindOf(MapSection);
+MapSectionZoom6.kindOf(MapSection);
 
 MapSectionZoom6.prototype.nextLevel = function mapSectionZoom6NextLevel(bounds) {
 	return null;
